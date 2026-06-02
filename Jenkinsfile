@@ -20,7 +20,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh "docker build -t roumaysaa/java-app ."
+                sh "docker build -t roumaysaasamy/java-app ."
             }
         }
 
@@ -35,7 +35,7 @@ pipeline {
                 ]) {
                     sh """
                         echo "\$DOCKER_PASS" | docker login -u "\$DOCKER_USER" --password-stdin
-                        docker push roumaysaa/java-app
+                        docker push roumaysaasamy/java-app
                     """
                 }
             }
